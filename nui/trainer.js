@@ -385,8 +385,8 @@ function resetTrainer() {
     showMenu(menus["mainmenu"], true);
 
     // Reset trainer memory
-    // memoryTree = {};
-    // currentMemory = {};
+    memoryTree = {};		//	Normally commented out
+    currentMemory = {};		//	Normally commented out
 }
 
 
