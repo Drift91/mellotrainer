@@ -2820,13 +2820,13 @@
         }
       },
       {
-        "menuName": "Hraphite",
+        "menuName": "Graphite",
         "data": {
           "action": 1
         }
       },
       {
-        "menuName": "Anhracite Black",
+        "menuName": "Anthracite Black",
         "data": {
           "action": 11
         }
@@ -7710,7 +7710,7 @@
       {
         "menuName": "MTL Dune",
         "data": {
-          "action": "DUNE"
+          "action": "RALLYTRUCK"
         }
       },
       {
