@@ -29,7 +29,7 @@
 	Toggles the vehicle and skin saving system. 
 	Options: true, false 
 -------------------------------------------------------------]]
-local localSaving = true
+local localSaving = false
 
 --[[-----------------------------------------------------------
 	Name: steamOnly 

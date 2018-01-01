@@ -9,9 +9,7 @@ files {
 	"nui/trainer.html",
 	"nui/trainer.js",
 	"nui/trainer.css",
-	"nui/Roboto.ttf",
-	"nui/Lemonada.ttf",
-	"nui/Roboto-Black.ttf"
+	"nui/Roboto.ttf"
 }
 
 client_scripts { 

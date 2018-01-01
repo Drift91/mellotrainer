@@ -213,7 +213,7 @@ function maxAmmoWeapon(weaponName)
     local weapon = GetHashKey(weaponName)
     local ammoType = GetPedAmmoType(playerPed, weapon)
     if(HasPedGotWeapon(playerPed, weapon, 0))then
-        SetPedAmmoByType(playerPed, ammoType, 9999) -- [OLD] AddAmmoToPed( playerPed, weapon, 9999 )
+        SetPedAmmoByType(playerPed, ammoType, 9999) -- [OLD]	AddAmmoToPed( playerPed, weapon, 9999 )
         drawNotification("Max Ammo")
     end
 end
@@ -225,9 +225,8 @@ function addWeaponClip(weaponName)
     local ammoType = GetPedAmmoType(playerPed, weapon)
 
     if(HasPedGotWeapon(playerPed, weapon, 0))then
-        local maxAmmo = GetWeaponClipSize(weapon)
-        --SetAmmoInClip(playerPed, weapon, maxAmmo) -- Refill Current Clip
-        AddAmmoToPed(playerPed, weapon, maxAmmo)
+        local maxAmmo = GetWeaponClipSize(weapon)	-- [OLD]	local maxAmmo = GetMaxAmmoInClip( playerPed, weapon, true )
+        AddAmmoToPed(playerPed, weapon, maxAmmo)	-- [OLD]	SetAmmoInClip(playerPed, weapon, maxAmmo) -- Refill Current Clip
         drawNotification("Ammo Clip Added")
     end
 end

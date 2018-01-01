@@ -42,26 +42,26 @@ maxPlayers = 32;
 
 --General Settings
 featurePlayerBlips = false;
-featurePlayerBlipNames = true;
+featurePlayerBlipNames = false;
 featurePlayerHeadDisplay = false;
 -- The above will sync by once the blip system rewrite happens
-featurePlayerNotifications = true;
-featureDeathNotifications = true;
+featurePlayerNotifications = false;
+featureDeathNotifications = false;
 featureHideMap = false;
 featureHideHud = false;
 featureBigHud = false;
-featureMapBlips = true;
+featureMapBlips = false;
 featureAreaStreetNames = false;
-featureRestoreAppearance = true;
+featureRestoreAppearance = false;
 --featureRestoreWeapons = false;
 
 
 --Vehicle Options
 featureCloseInstantly = false;
 featureSpeedometer = false;
-featureSpawnInsideCar = true;
-featureSpawnCarInFront = true 
-featureDeleteLastVehicle = true;
+featureSpawnInsideCar = false;
+featureSpawnCarInFront = false 
+featureDeleteLastVehicle = false;
 featureNoFallOff = false;
 featureNoDragOut = false;
 featureNoHelmet = false; 
@@ -86,7 +86,7 @@ featurePlayerSuperJump = false;
 featureNoRagDoll = false;
 featurePlayerInvisible = false;
 featurePlayerDrunk = false;
-featurePlayerInfiniteStamina = true;
+featurePlayerInfiniteStamina = false;
 featurePlayerInfiniteParachutes = false;
 featurePlayerInfiniteAmmo = false;
 featurePlayerNoReload = false;
@@ -107,8 +107,8 @@ featureWeatherFreeze = false;
 
 
 -- Voice
-featureShowVoiceChatSpeaker = true;
-featureVoiceChat = true;
+featureShowVoiceChatSpeaker = false;
+featureVoiceChat = false;
 -- One of the below must be true.
 -- If multiple are true only the first one will apply.
 featureVPAllPlayers = true;
