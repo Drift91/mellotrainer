@@ -3288,13 +3288,13 @@
         }
       },
       {
-        "menuName": "Hraphite",
+        "menuName": "Graphite",
         "data": {
           "action": 1
         }
       },
       {
-        "menuName": "Anhracite Black",
+        "menuName": "Anthracite Black",
         "data": {
           "action": 11
         }
@@ -3740,13 +3740,13 @@
         }
       },
       {
-        "menuName": "Hraphite",
+        "menuName": "Graphite",
         "data": {
           "action": 1
         }
       },
       {
-        "menuName": "Anhracite Black",
+        "menuName": "Anthracite Black",
         "data": {
           "action": 11
         }
@@ -4500,13 +4500,13 @@
         }
       },
       {
-        "menuName": "Hraphite",
+        "menuName": "Graphite",
         "data": {
           "action": 1
         }
       },
       {
-        "menuName": "Anhracite Black",
+        "menuName": "Anthracite Black",
         "data": {
           "action": 11
         }
@@ -4952,13 +4952,13 @@
         }
       },
       {
-        "menuName": "Hraphite",
+        "menuName": "Graphite",
         "data": {
           "action": 1
         }
       },
       {
-        "menuName": "Anhracite Black",
+        "menuName": "Anthracite Black",
         "data": {
           "action": 11
         }
@@ -6542,7 +6542,7 @@
         }
       },
       {
-        "menuName": "Scale - Sol",
+        "menuName": "Scale - So",
         "data": {
           "action": "14 20"
         }
@@ -6568,67 +6568,169 @@
       {
         "menuName": "Jazz Horn 1",
         "data": {
-          "action": "14 25"
+          "action": "14 24"
         }
       },
       {
         "menuName": "Jazz Horn 2",
         "data": {
-          "action": "14 26"
+          "action": "14 25"
         }
       },
       {
         "menuName": "Jazz Horn 3",
         "data": {
-          "action": "14 27"
+          "action": "14 26"
         }
       },
       {
-        "menuName": "Jazz Horn Looped",
+        "menuName": "Jazz Horn Loop",
         "data": {
-          "action": "14 28"
+          "action": "14 27"
         }
       },
       {
         "menuName": "Star Spangled Banner 1",
         "data": {
-          "action": "14 29"
+          "action": "14 28"
         }
       },
       {
         "menuName": "Star Spangled Banner 2",
         "data": {
-          "action": "14 30"
+          "action": "14 29"
         }
       },
       {
         "menuName": "Star Spangled Banner 3",
         "data": {
-          "action": "14 31"
+          "action": "14 30"
         }
       },
       {
         "menuName": "Star Spangled Banner 4",
         "data": {
+          "action": "14 31"
+        }
+      },
+      {
+        "menuName": "Classical Horn 8 Loop",
+        "data": {
           "action": "14 32"
         }
       },
       {
-        "menuName": "Classical Horn Looped 1",
+        "menuName": "Classical Horn 9 Loop",
         "data": {
           "action": "14 33"
         }
       },
       {
-        "menuName": "Classical Horn 8",
+        "menuName": "Classical Horn 10 loop",
         "data": {
           "action": "14 34"
         }
       },
       {
-        "menuName": "Classical Horn 2 Looped",
+        "menuName": "Classical Horn 8",
         "data": {
           "action": "14 35"
+        }
+      },
+      {
+        "menuName": "Classical Horn 9",
+        "data": {
+          "action": "14 36"
+        }
+      },
+      {
+        "menuName": "Classical Horn 10",
+        "data": {
+          "action": "14 37"
+        }
+      },
+      {
+        "menuName": "Funeral Loop",
+        "data": {
+          "action": "14 38"
+        }
+      },
+      {
+        "menuName": "Funeral",
+        "data": {
+          "action": "14 39"
+        }
+      },
+      {
+        "menuName": "Spooky Loop",
+        "data": {
+          "action": "14 40"
+        }
+      },
+      {
+        "menuName": "Spooky",
+        "data": {
+          "action": "14 41"
+        }
+      },
+      {
+        "menuName": "San Andreas Loop",
+        "data": {
+          "action": "14 42"
+        }
+      },
+      {
+        "menuName": "San Andreas",
+        "data": {
+          "action": "14 43"
+        }
+      },
+      {
+        "menuName": "Liberty City Loop",
+        "data": {
+          "action": "14 44"
+        }
+      },
+      {
+        "menuName": "Liberty City",
+        "data": {
+          "action": "14 45"
+        }
+      },
+      {
+        "menuName": "Festive 1 Loop",
+        "data": {
+          "action": "14 46"
+        }
+      },
+      {
+        "menuName": "Festive 1",
+        "data": {
+          "action": "14 47"
+        }
+      },
+      {
+        "menuName": "Festive 2 Loop",
+        "data": {
+          "action": "14 48"
+        }
+      },
+      {
+        "menuName": "Festive 2",
+        "data": {
+          "action": "14 49"
+        }
+      },
+      {
+        "menuName": "Festive 3 Loop",
+        "data": {
+          "action": "14 50"
+        }
+      },
+      {
+        "menuName": "Festive 3",
+        "data": {
+          "action": "14 51"
         }
       }
     ]

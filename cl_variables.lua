@@ -59,9 +59,9 @@ featureRestoreAppearance = false;
 --Vehicle Options
 featureCloseInstantly = false;
 featureSpeedometer = false;
-featureSpawnInsideCar = false;
-featureSpawnCarInFront = false 
-featureDeleteLastVehicle = false;
+featureSpawnInsideCar = true;
+featureSpawnCarInFront = false;
+featureDeleteLastVehicle = true;
 featureNoFallOff = false;
 featureNoDragOut = false;
 featureNoHelmet = false; 
