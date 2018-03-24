@@ -124,7 +124,7 @@ end
 
 
 function DATASAVE:SendSavedData( file, type, source )
-    local event = "wk:RecieveSaved" .. string.gsub( type, "^%l", string.upper )
+    local event = "wk:ReceiveSaved" .. string.gsub( type, "^%l", string.upper )
     local data = self:LoadFile( file )
 
     if ( next( data ) ~= nil ) then 
@@ -138,25 +138,32 @@ function DATASAVE:SendSaveData( source )
     if ( id ~= nil ) then 
         local vehicleData = {}
         local skinData = {}
+		local loadoutData = {}
 
         local vehFileName = id .. "_vehicles.txt"
         local skinFileName = id .. "_skins.txt"
         local trainerFileName = id .. "_toggles.txt"
+        local loadoutFileName = id .. "_loadouts.txt"
 
         vehicleData = self:LoadFile( vehFileName )
         skinData = self:LoadFile( skinFileName )
+        loadoutData = self:LoadFile( loadoutFileName )
         trainerToggles = self:LoadFile( trainerFileName )
 
         if ( next( vehicleData ) ~= nil ) then 
-            TriggerClientEvent( 'wk:RecieveSavedVehicles', source, vehicleData )
+            TriggerClientEvent( 'wk:ReceiveSavedVehicles', source, vehicleData )
         end 
 
         if ( next( skinData ) ~= nil ) then 
-            TriggerClientEvent( 'wk:RecieveSavedSkins', source, skinData )
+            TriggerClientEvent( 'wk:ReceiveSavedSkins', source, skinData )
+        end
+
+        if ( next( loadoutData ) ~= nil ) then 
+            TriggerClientEvent( 'wk:ReceiveSavedLoadouts', source, loadoutData )
         end
 
         if ( next( trainerToggles ) ~= nil ) then
-            TriggerClientEvent( 'wk:RecieveSavedToggles', source, trainerToggles)
+            TriggerClientEvent( 'wk:ReceiveSavedToggles', source, trainerToggles)
         end
     else 
         self:print( "Attempted to load save data for " .. GetPlayerName( source ) .. ", but does not have a steam id." ) 
@@ -186,6 +193,7 @@ function DATASAVE:AddPlayerToDataSave( source )
         fileNames.vehicles = id .. "_vehicles.txt"
         fileNames.skins = id .. "_skins.txt"
         fileNames.toggles = id .. "_toggles.txt"
+        fileNames.loadouts = id .. "_loadouts.txt"
 
         for key, filename in pairs( fileNames ) do
             if ( self:DoesFileExist( filename ) )then

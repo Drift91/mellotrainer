@@ -8912,7 +8912,7 @@
         }
       },
       {
-        "menuName": "Vulcan Warrener",
+        "menuName": "Vulcar Warrener",
         "data": {
           "action": "WARRENER"
         }
@@ -9002,7 +9002,7 @@
       {
         "menuName": "Albany Buccaneer",
         "data": {
-          "action": "BUCCANEER"
+          "action": "BUCCANEER2"
         }
       },
       {
@@ -9426,7 +9426,7 @@
         }
       },
       {
-        "menuName": "Benefactor Schwarzer",
+        "menuName": "Benefactor Schwartzer",
         "data": {
           "action": "SCHWARZER"
         }

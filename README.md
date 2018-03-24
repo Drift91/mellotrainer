@@ -161,7 +161,7 @@ RegisterNUICallback("requirecop", function(data, cb)
     TriggerServerEvent("mellotrainer:requestCopStatus")
 end)
 
--- Recieve Cop Status
+-- Receive Cop Status
 RegisterNetEvent("mellotrainer:copstatus")
 AddEventHandler("mellotrainer:copstatus", function(status)
     if(status)then

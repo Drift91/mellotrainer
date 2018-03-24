@@ -1008,7 +1008,7 @@ function addNewTrainerOptions(newEle,currentObject,curIndex,idName,defaultAction
                 break
 
             default:
-                console.log("Nothinhg")
+                console.log("Nothing")
         }
     }
     return newEle

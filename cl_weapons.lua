@@ -66,9 +66,47 @@ local COMPONENTS =
     Loadout Saving and Loading 
 ------------------------------------------------------------------------]]--
 local loadouts = {}
-local loadoutsCount = 0 
+local loadoutCount = 0 
 
--- event for grabbing info from server 
+RegisterNetEvent( 'wk:ReceiveSavedLoadouts' )
+AddEventHandler( 'wk:ReceiveSavedLoadouts', function( dataTable )
+    loadouts = dataTable
+    loadoutCount = getTableLength( dataTable )
+end )
+
+function CreateLoadoutOptions( index )
+	local spawnLoadout = {
+		[ "menuName" ] = "Apply To Player", 
+		[ "data" ] = {
+			[ "action" ] = "spawnsavedloadout " .. index
+		}
+	}
+
+	local overwriteSave = {
+		[ "menuName" ] = "Overwrite With Current", 
+		[ "data" ] = {
+			[ "action" ] = "loadoutsave " .. index
+		}
+	}
+
+	local renameLoadout = {
+		[ "menuName" ] = "Rename Save", 
+		[ "data" ] = {
+			[ "action" ] = "loadoutsave " .. index .. " r"
+		}
+	}
+
+	local deleteLoadout = {
+		[ "menuName" ] = "Delete", 
+		[ "data" ] = {
+			[ "action" ] = "deletesavedloadout " .. index
+		}
+	}
+
+	local options = { spawnLoadout, overwriteSave, renameLoadout, deleteLoadout }
+
+	return options 
+end 
 
 RegisterNUICallback( "loadsavedloadouts", function( data, cb )
     local validOptions = {}
@@ -181,10 +219,10 @@ RegisterNUICallback( "loadoutsave", function( data, cb )
 
                 -- use https://github.com/citizenfx/project-lambdamenu/blob/master/LambdaMenu/weapons.cpp#L720 for help 
 
-                --[[if ( not renaming and not overwriting ) then 
-                    loadoutsCount = loadoutsCount + 1
-                    loadouts[loadoutsCount] = loadoutTableData
-                    TriggerServerEvent( 'wk:DataSave', "loadouts", loadoutTableData, loadoutsCount )
+                if ( not renaming and not overwriting ) then 
+                    loadoutCount = loadoutCount + 1
+                    loadouts[loadoutCount] = loadoutTableData
+                    TriggerServerEvent( 'wk:DataSave', "loadouts", loadoutTableData, loadoutCount )
 
                     SendNUIMessage({
                         reshowmenu = true 
@@ -202,10 +240,31 @@ RegisterNUICallback( "loadoutsave", function( data, cb )
                     })
                 end 
 
-                resetTrainerMenus( "loadsavedloadouts" ) ]]--
+                resetTrainerMenus( "loadsavedloadouts" )
             end 
         end 
     end )
+end )
+
+RegisterNUICallback( "deletesavedloadout", function( data, cb ) 
+	local index = tonumber( data.action )
+
+	-- Citizen.Trace( "Found " .. index .. " with type " .. type( index ) )
+
+	if ( loadoutCount > 0 ) then 
+		loadouts[index] = nil 
+		TriggerServerEvent( 'wk:DataSave', "loadouts", nil, index )
+
+		SendNUIMessage({
+			trainerback = true 
+		})
+
+		SendNUIMessage({
+			trainerback = true 
+		})
+
+		resetTrainerMenus( "loadsavedloadouts" )
+	end 
 end )
 
 -- Max Clip

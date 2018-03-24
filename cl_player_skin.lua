@@ -66,8 +66,8 @@ end
 local skins = {}
 local skinsCount = 0
 
-RegisterNetEvent( 'wk:RecieveSavedSkins' )
-AddEventHandler( 'wk:RecieveSavedSkins', function( dataTable )
+RegisterNetEvent( 'wk:ReceiveSavedSkins' )
+AddEventHandler( 'wk:ReceiveSavedSkins', function( dataTable )
     skins = dataTable
     skinsCount = getTableLength( dataTable )
 end )
