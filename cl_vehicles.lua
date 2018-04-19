@@ -530,6 +530,8 @@ function UpdateVehicleFeatureVariables( veh )
 
 	windows = {false, false, false, false}
 
+	featureTorqueMultiplier = 1
+	featurePowerMultiplier = 1
 	featureLowerForce = 0
 
 	resetTrainerMenus( "vehmods" )
@@ -1179,6 +1181,18 @@ RegisterNUICallback("vehopts", function(data, cb)
 		SetVehicleReduceGrip(playerVeh, featureDriftMode)
 		drawNotification("Drift Mode: "..text)
 
+	-- Power Options
+	elseif(action == "powerboost")then
+		featurePowerMultiplier = tonumber(data.data[3])
+
+		drawNotification("Power Boost Multiplier: "..tostring(featurePowerMultiplier))
+
+	-- Torque Options
+	elseif(action == "torqueboost")then
+		featureTorqueMultiplier = tonumber(data.data[3])
+
+		drawNotification("Torque Multiplier: "..tostring(featureTorqueMultiplier))
+
 	-- Lowering Level
 	elseif(action == "lowering")then
 		if(not(IsThisModelACar(GetEntityModel(playerVeh))))then
@@ -1221,7 +1235,9 @@ Citizen.CreateThread( function()
 			local veh = GetVehiclePedIsIn( ped, false )
 
 			if ( GetPedInVehicleSeat( veh, -1 ) == ped ) then 
-
+				SetVehicleEngineTorqueMultiplier( veh, featureTorqueMultiplier + 0.001 )
+				SetVehicleEnginePowerMultiplier( veh, featurePowerMultiplier + 0.001 )
+						
 				if ( featureLowerForce ~= 0 ) then 
 					ApplyForceToEntity( veh, true, 0.0, 0.0, lowerForces[featureLowerForce], 0.0, 0.0, 0.0, true, true, true, true, false, true )
 				end

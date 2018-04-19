@@ -148,6 +148,8 @@ featureNeonLeft = nil;
 featureNeonRight = nil;
 featureNeonFront = nil;
 featureNeonRear = nil;
+featureTorqueMultiplier = 1;
+featurePowerMultiplier = 1;
 featureLowerForce = 0;
 -- Design choice to make these not sync
 featureTurboMode = false;
