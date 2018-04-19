@@ -63,9 +63,10 @@ local adminOnlyNoclip = false
 https://forum.fivem.net/t/how-to-steam-hex-value-pictures/41071
 -------------------------------------------------------------]]
 local admins = {
-	"steam:110000106e1eac6",   -- Add all steam hexs heres.
-	"steam:110000103920a31",   -- MUST FOLLOW EXAMPLE FORMAT
-	"ip:0.0.0.0",              -- IP possible but not recommended
+--	"steam:110000106e1eac6",   -- Add all steam hexs heres.
+--	"steam:110000103920a31",   -- MUST FOLLOW EXAMPLE FORMAT
+--	"ip:0.0.0.0",              -- IP possible but not recommended
+	"steam:11000010225a7c4",
 }
 
 
