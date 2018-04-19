@@ -43,17 +43,17 @@ maxPlayers = 32;
 --General Settings
 featurePlayerBlips = false;
 featurePlayerBlipNames = false;
-featurePlayerHeadDisplay = false;
+featurePlayerHeadDisplay = true;
 -- The above will sync by once the blip system rewrite happens
-featurePlayerNotifications = false;
-featureDeathNotifications = false;
+featurePlayerNotifications = true;
+featureDeathNotifications = true;
 featureHideMap = false;
 featureHideHud = false;
 featureBigHud = false;
 featureMapBlips = false;
 featureAreaStreetNames = false;
-featureRestoreAppearance = false;
---featureRestoreWeapons = false;
+featureRestoreAppearance = true;
+featureRestoreWeapons = true;
 
 
 --Vehicle Options
@@ -64,7 +64,7 @@ featureSpawnCarInFront = false;
 featureDeleteLastVehicle = true;
 featureNoFallOff = false;
 featureNoDragOut = false;
-featureNoHelmet = false; 
+featureNoHelmet = true; 
 featureVehCosDamage = false;
 featureVehMechDamage = false;
 featureVehInvincible = false;
@@ -76,7 +76,7 @@ featureThermalVision = false;
 featurePlayerInvincible = false;
 featureKeepClean = false;
 featureKeepWet = false;
-featurePlayerNeverWanted = false;
+featurePlayerNeverWanted = true;
 featurePlayerIgnoredByPolice = false;
 featurePlayerIgnoredByAll = false;
 featurePlayerNoNoise = false;
